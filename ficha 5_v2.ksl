@@ -1,0 +1,141 @@
+group resposta sim, não.
+
+question 'sangue no ouvido' 
+'Existe sangue no ouvido?';
+choose one of resposta.
+
+question 'dor no ouvido'
+'Existe dor no ouvido?';
+choose one of resposta.
+
+question surdez
+'Existe surdez?';
+choose one of resposta.
+
+question 'derramamento liq. cefal.'
+'Existe derramamento de líquido cefalorraquiano?';
+choose one of resposta.
+
+question 'dor de cabeca'
+'Existe dor de cabeça?';
+choose one of resposta.
+
+question 'sangue no nariz'
+'Existe sangue no nariz?';
+choose one of resposta.
+
+question 'sangue no ouvido'
+'Existe sangue no ouvido?';
+choose one of resposta.
+
+question 'sangue na boca'
+'Existe sangue na boca?';
+choose one of resposta.
+
+question 'cor sangue castanho escuro'
+'O sangue apresenta cor castanho escuro?';
+choose one of resposta.
+
+question vomitos
+'Vomitos?';
+choose one of resposta.
+
+question 'sangue na vagina'
+'Existe sangue na vagina?';
+choose one of resposta.
+
+question 'sangue no penis'
+'Existe sangue no penis?';
+choose one of resposta.
+
+question 'sangue no anus'
+'Existe sangue no anus ou nas vezes?';
+choose one of resposta.
+
+question 'sangue anus tipo borras de cafe'
+'Existe sangue nas vezes com aparência de borras de café?';
+choose one of resposta.
+
+question 'sangue anus normal'
+'Existe sangue nas vezes com aparência normal?';
+choose one of resposta.
+
+
+rule r1 if
+	'sangue no ouvido' is sim then
+	hemorragia becomes superior and include r1 in ruleList.
+
+rule r2 if
+	'sangue no ouvido' is não then
+	hemorragia becomes inferior and include r2 in ruleList.
+
+rule r3 if
+	hemorragia is superior and ['dor no ouvido' is sim or surdez is sim] then
+	diagnostico becomes otorragia and include r3 in ruleList.
+
+rule r4 if
+	hemorragia is superior and 'dor no ouvido' is não and surdez is não and ['derramamento liq. cefal.' is sim or 'dor de cabeca' is sim] then
+	diagnostico becomes 'fractura craniana' and include r4 in ruleList.
+
+rule r5 if
+	hemorragia is inferior and 'sangue no nariz' is sim then
+	diagnostico becomes epistaxe and include r5 in ruleList.
+
+rule r6 if
+	hemorragia is inferior and 'sangue no nariz' is não and 'sangue na boca' is sim then
+	'problema na boca' becomes sim and include r6 in ruleList.
+
+rule r7 if
+	'problema na boca' is sim and 'cor sangue castanho escuro' is sim and vomitos is sim then
+	diagnostico becomes hematese and include r7 in ruleList.
+
+rule r8 if
+	'problema na boca' is sim and 'cor sangue castanho escuro' is não and vomitos is não then
+	diagnostico becomes 'hemorragia da boca' and include r8 in ruleList.
+
+rule r9 if
+	hemorragia is inferior and 'sangue na boca' is não then
+	'problema inferior' becomes sim and include r9 in ruleList.
+
+rule r10 if
+	'problema inferior' is sim and 'sangue na vagina' is sim then
+	diagnostico becomes metrorragia and include r10 in ruleList.
+
+rule r11 if
+	'problema inferior' is sim and 'sangue no penis' is sim then
+	diagnostico becomes hematuria and include r11 in ruleList.
+
+rule r12 if
+	'problema inferior' is sim and 'sangue no anus' is sim then
+	'problema no anus' becomes sim and include r12 in ruleList.
+
+rule r13 if
+	'problema no anus' is sim and 'sangue anus tipo borras de cafe' is sim then
+	diagnostico becomes melena and include r13 in ruleList.
+
+rule r14 if
+	'problema no anus' is sim and 'sangue anus normal' is sim then
+	diagnostico becomes rectorragia and include r14 in ruleList.
+
+
+ruleset rs
+	contains all rules;
+	initiate by doing diagnostico becomes desconhecido;
+	terminate when diagnostico is different from desconhecido;
+	update ruleset by removing each selected rule.
+
+do consult('ficha_5.pl').
+do consult('explainhow.pl').
+do consult('explainwhynot.pl').
+
+action run do
+	restart and
+	invoke ruleset rs and
+	lista_evidencias(LEvid) and
+	formata_msg(diagnostico, LEvid, Msg) and
+	msgbox('Diagnóstico', Msg, 0, _) and
+	explainHow(ruleList) and
+	explainWhyNot.
+
+	
+
