@@ -1,0 +1,86 @@
+%FE age_group edited at 21:58:58 on 7/1/2020
+fuzzy_variable age_group ;
+   ranges from 0 to  90 ; 
+   fuzzy_set child is \ shaped and linear at 0, 14 ; 
+   fuzzy_set teenager is /\ shaped and linear at 12, 16, 20 ; 
+   fuzzy_set young_adult is /\ shaped and linear at 18, 27, 36 ; 
+   fuzzy_set adult is /\ shaped and linear at 30, 45, 60 ; 
+   fuzzy_set senior is /\ shaped and linear at 50, 65, 80 ; 
+   fuzzy_set elder is / shaped and linear at 65, 90 ; 
+   defuzzify using 
+      all memberships
+       and mirror rule
+       and shrinking . 
+
+%FE difficulty created at 22:38:37 on 7/1/2020
+fuzzy_variable difficulty ;
+   ranges from 0 to  100 ; 
+   fuzzy_set easy is \ shaped and linear at 0, 30 ; 
+   fuzzy_set medium is /\ shaped and linear at 20, 35, 55 ; 
+   fuzzy_set hard is /\ shaped and linear at 45, 60, 80 ; 
+   fuzzy_set insane is / shaped and linear at 70, 100 ; 
+   defuzzify using 
+      all memberships
+       and mirror rule
+       and shrinking . 
+
+%FE game_group edited at 23:47:38 on 7/1/2020
+fuzzy_variable game_group ;
+   ranges from 0 to  100 ; 
+   fuzzy_set begginer is \ shaped and linear at 10, 30 ; 
+   fuzzy_set casual is /\ shaped and linear at 14, 37, 60 ; 
+   fuzzy_set intermediate is /\ shaped and linear at 42, 61, 81 ; 
+   fuzzy_set hardcore is / shaped and linear at 71, 88 ; 
+   defuzzify using 
+      all memberships
+       and mirror rule
+       and shrinking . 
+
+
+
+fuzzy_matrix game_classification age_group * difficulty -> game_group ;
+child * easy -> begginer;
+child * medium -> begginer; 
+child * hard -> casual;
+child * insane -> casual; 
+teenager * easy -> begginer;
+teenager * medium -> casual;
+teenager * hard -> intermediate;
+teenager * insane -> hardcore;
+young_adult * easy -> casual;
+young_adult * medium -> intermediate;
+young_adult * hard -> hardcore;
+young_adult * insane -> hardcore;
+adult * easy -> casual;
+adult * medium -> intermediate;
+adult * hard -> intermediate;
+adult * insane -> hardcore;senior * easy -> begginer;
+senior * medium -> begginer; 
+senior * hard -> casual;
+senior * insane -> hardcore;
+elder  * easy -> begginer;
+elder * medium -> begginer; 
+elder * hard -> casual;
+elder * insane -> intermediate .
+
+
+question age
+	'How old are you?';
+	input integer.
+
+question q_difficulty
+	'Choose, from 0 to 100 the game difficulty you are looking for.';
+	input integer.	
+
+
+action classification(GRP); 
+	do
+	restart
+	and uncertainty_trace 
+	and check that Age is age 
+	and check that Diff is q_difficulty 
+	and reset all fuzzy values
+  	and fuzzify the age_group from Age
+  	and fuzzify the difficulty from Diff
+  	and propagate game_classification fuzzy rules
+  	and defuzzify the game_group to GRP.
