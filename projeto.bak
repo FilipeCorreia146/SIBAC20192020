@@ -208,6 +208,12 @@ instance apex_legends is a game
 instance titan_fall is a game
 	name is 'Titan Fall'.
 
+instance command_mo is a game
+	name is 'Command: Modern Operations'.
+
+instance kuf is a game
+	name is 'Kingdom Under Fire'.
+
 % --- Questions --- %
 
 question platform
@@ -572,11 +578,15 @@ rule rPcOriginSimulation2 if
 
 rule rPcTurn1 if
 	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'Yes' and turn is 'No' then
-	chosen_game becomes name of starcraft and include rPcTurn1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 50 then name of command_mo
+	else name of starcraft) and include rPcTurn1 in ruleList.
 
 rule rPcTurn2 if
 	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'Yes' and turn is 'Yes' then
-	chosen_game becomes name of civilization and include rPcTurn2 in ruleList.
+	chosen_game  becomes ( 
+	if fuzzy_result is below 30 then name of civilization
+	else name of kuf) and include rPcTurn2 in ruleList.
 
 rule rPcSandbox1 if
 	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'No' and sandbox is 'No' then
@@ -592,7 +602,9 @@ rule rPcSteamZombie1 if
 
 rule rPcSteamZombie2 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'Yes' and realistic is 'No' and zombies is 'No' then
-	chosen_game becomes name of team_fortress and include rPcSteamZombie2 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 30 then name of half_life
+	else name of team_fortress) and include rPcSteamZombie2 in ruleList.
 
 rule rPcOriginSports1 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' and simulation is 'No' and sports is 'Yes' then
