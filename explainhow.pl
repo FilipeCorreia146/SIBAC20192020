@@ -4,7 +4,7 @@ explainHow(RuleList):-
 	retractall(message(_)),assert(message(``)),
 	explainHow1(RuleList),
 	message(Exp),
-	msgbox('Explicação',Exp,0,_).
+	msgbox('Explanation',Exp,0,_).
 
 explainHow1([]).
 explainHow1([R|RuleList]):-
@@ -13,9 +13,9 @@ explainHow1([R|RuleList]):-
 
 explainRule(R):-
 	isa_rule(R,LHS,RHS,_,_),
-	(write('A regra '), write(R), write(' disparou devido aos seguintes factos:'), nl) ~> Str1, appendMessage(Str1),
+	(write('The rule '), write(R), write(' was triggered due to the following facts: '), nl) ~> Str1, appendMessage(Str1),
 	checkLHS(LHS),
-	(write('Permitindo obter a conclusão:'), nl) ~> Str2, appendMessage(Str2),
+	(write('Making it possible to obtain the conclusion:'), nl) ~> Str2, appendMessage(Str2),
 	showRHS(RHS).
 
 checkLHS(C):-
@@ -29,10 +29,10 @@ checkLHS((C;RC)):-
 checkCondition(equality(Atrib,Value)):-
 	isa_question(Atrib,_,_,_),!,
 	isa_slot(Atrib,global,Value),
-	(tab(2), write('Observação da evidência '), write(Atrib), write(': '), write(Value), nl)~> Str, appendMessage(Str).
+	(tab(2), write('Evidence '), write(Atrib), write(' observation: '), write(Value), nl)~> Str, appendMessage(Str).
 checkCondition(equality(Atrib,Value)):-
 	isa_slot(Atrib,global,Value),
-	(tab(2), write('Conclusão intermédia '), write(Atrib), write(': '), write(Value), nl)~> Str, appendMessage(Str).
+	(tab(2), write('Intermediate conclusion '), write(Atrib), write(': '), write(Value), nl)~> Str, appendMessage(Str).
 
 
 showRHS(new_value(C,V)):-!,

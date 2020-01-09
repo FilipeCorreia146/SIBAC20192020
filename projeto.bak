@@ -4,135 +4,209 @@ group platform 'Playstation 4', 'Nintendo Switch', 'PC', 'Mobile'.
 group provider 'Steam', 'Origin', 'Epic Games'.
 
 frame game
-	default name is '' and
-	default rating is ''.
+	default name is ''.
 
 % --- Game's instances declaration --- %
 instance spider_man is a game
-name is 'Spider-Man' and rating is ''.
+	name is 'Spider-Man'.
 
 instance god_of_war is a game
-name is 'God Of War' and rating is ''.
+	name is 'God Of War'.
 
 instance until_dawn is a game
-name is 'Until Dawn' and rating is ''.
+	name is 'Until Dawn'.
 
 instance tetris_effect is a game
-name is 'Tetris Effect' and rating is ''.
+	name is 'Tetris Effect'.
 
 instance shadow_of_colossus is a game
-name is 'Shadow of Colossus' and rating is ''.
+	name is 'Shadow of Colossus'.
+
+instance captain_toad is a game
+	name is 'Captain Toad'.
+
+instance fire_emblem is a game
+	name is 'Fire Emblem'.
 
 instance horizon_zero_dawn is a game
-name is 'Horizon: Zero Dawn' and rating is ''.
+	name is 'Horizon: Zero Dawn'.
 
 instance grand_turismo is a game
-name is 'Grand Turismo' and rating is ''.
+	name is 'Grand Turismo'.
 
 instance fifa is a game
-name is 'FIFA' and rating is ''.
+	name is 'FIFA'.
 
 instance legend_of_zelda is a game
-name is 'Legend Of Zelda' and rating is ''.
+	name is 'Legend Of Zelda'.
 
 instance mario_rabbids is a game
-name is 'Mario + Rabbids: Kingdom Battle' and rating is ''.
+	name is 'Mario + Rabbids: Kingdom Battle'.
 
 instance pokemon is a game
-name is 'Pokemon' and rating is ''.
+	name is 'Pokemon'.
 
 instance mario_kart is a game
-name is 'Mario Kart' and rating is ''.
+	name is 'Mario Kart'.
 
 instance super_smash_brothers is a game
-name is 'Super Smash Brothers' and rating is ''.
+	name is 'Super Smash Brothers'.
+
+instance pokken_tournament is a game
+	name is 'Pokkén Tournament'.
 
 instance mario_tennis is a game
-name is 'Mario Tennis Aces' and rating is ''.
+	name is 'Mario Tennis Aces'.
 
 instance pokemon_go is a game
-name is 'Pokemon Go' and rating is ''.
+	name is 'Pokemon Go'.
 
 instance minecraft_earth is a game
-name is 'Minecraft Earth' and rating is ''.
+	name is 'Minecraft Earth'.
 
 instance minecraft is a game
-name is 'Minecraft' and rating is ''.
+	name is 'Minecraft'.
 
 instance skyrim is a game
-name is 'Skyrim ' and rating is ''.
+	name is 'Skyrim'.
 
 instance gta is a game
-name is 'GTA' and rating is ''.
+	name is 'GTA'.
 
 instance clash_royale is a game
-name is 'Clash Royale' and rating is ''.
+	name is 'Clash Royale'.
 
 instance asphalt is a game
-name is 'Asphalt' and rating is ''.
+	name is 'Asphalt'.
 
 instance real_racing is a game
-name is 'Real Racing' and rating is ''.
+	name is 'Real Racing'.
 
 instance counter_strike is a game
-name is 'Counter Strike' and rating is ''.
+	name is 'Counter Strike'.
 
 instance team_fortress is a game
-name is 'Team Fortress' and rating is ''.
+	name is 'Team Fortress'.
 
 instance left4dead is a game
-name is 'Left 4 Dead' and rating is ''.
+	name is 'Left 4 Dead'.
 
 instance portal is a game
-name is 'Portal' and rating is ''.
+	name is 'Portal'.
 
 instance dota is a game
-name is 'DOTA 2' and rating is ''.
+	name is 'DOTA 2'.
+
+instance smite is a game
+	name is 'Smite'.
 
 instance battlefield is a game
-name is 'Battlefield' and rating is ''.
+	name is 'Battlefield'.
 
 instance star_wars_battlefront is a game
-name is 'Star Wars: Battlefront' and rating is ''.
+	name is 'Star Wars: Battlefront'.
 
 instance the_sims is a game
-name is 'The Sims' and rating is ''.
+	name is 'The Sims'.
 
 instance dragon_age is a game
-name is 'Dragon Age' and rating is ''.
+	name is 'Dragon Age'.
 
 instance command_conquer is a game
-name is 'Command and Conquer' and rating is ''.
+	name is 'Command and Conquer'.
 
 instance fortnite is a game
-name is 'Fortnite' and rating is ''.
+	name is 'Fortnite'.
 
 instance lol is a game
-name is 'League Of Legends' and rating is ''.
+	name is 'League Of Legends'.
 
 instance starcraft is a game
-name is 'Starcraft' and rating is ''.
+	name is 'Starcraft'.
 
 instance civilization is a game
-name is 'Civilization' and rating is ''.
+	name is 'Civilization'.
 
 instance minecraft is a game
-name is 'Minecraft' and rating is ''.
+	name is 'Minecraft'.
 
 instance terraria is a game
-name is 'Terraria' and rating is ''.
+	name is 'Terraria'.
 
 instance gta is a game
-name is 'Grand Theft Auto' and rating is ''.
+	name is 'Grand Theft Auto'.
 
 instance nba_2k_20 is a game
-name is 'NBA2K20' and rating is ''.
+	name is 'NBA2K20'.
 
 instance rocket_league is a game
-name is 'Rocket League' and rating is ''.
+	name is 'Rocket League'.
 
 instance golf_story is a game
-name is 'Golf Story' and rating is ''.
+	name is 'Golf Story'.
+
+instance dark_souls is a game
+	name is 'Dark Souls'.
+
+instance medi_evil is a game
+	name is 'MediEvil'.
+
+instance resident_evil is a game
+	name is 'Resident Evil'.
+
+instance days_gone is a game
+	name is 'Days Gone'.
+
+instance journey is a game
+	name is 'Journey'.
+
+instance extinction is a game
+	name is 'Extinction'.
+
+instance uncharted is a game
+	name is 'Uncharted'.
+
+instance assetto_corsa is a game
+	name is 'Assetto Corsa'.
+
+instance uncharted is a game
+	name is 'Project Cars'.
+
+instance pes is a game
+	name is 'Pro Evolution Soccer'.
+
+instance mario_odyssey is a game
+	name is 'Mario Odyssey'.
+
+instance mario_maker is a game
+	name is 'Super Mario Maker'.
+
+instance table_top is a game
+	name is 'Table Top Racing'.
+
+instance mario_sonic is a game
+	name is 'Mario & Sonic at the Olympics'.
+
+instance metro_exodus is a game
+	name is 'Metro Exodus'.
+
+instance killing_floor is a game
+	name is 'Killing Floor'.
+
+instance rainbow_six is a game
+	name is 'Rainbow Six Siege'.
+
+instance hunie_pop is a game
+	name is 'Hunie Pop'.
+
+instance dota_underlords is a game
+	name is 'Dota Underlords'.
+
+instance apex_legends is a game
+	name is 'Apex Legends'.
+
+instance titan_fall is a game
+	name is 'Titan Fall'.
 
 % --- Questions --- %
 
@@ -269,17 +343,11 @@ rule rPlayAction2 if
 rule rPlayOpen1 if
 	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'Yes' then
 	chosen_game becomes ( 
-	if teste is below 10 then name of spider_man
-	else if teste is below 30 then name of skyrim  
-	else if teste is below 60 then name of skyrim  
-	else name of minecraft  )
+	if fuzzy_result is below 10 then name of minecraft
+	else if fuzzy_result is below 30 then name of spider_man
+	else if fuzzy_result is below 60 then name of gta  
+	else name of dark_souls  )
 	and include rPlayOpen1 in ruleList.
-
-
-/*else if platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'Yes' and
-	the game_group is below 50 then the
-	chosen_game becomes the name of until_dawn
-	and include rPlayOpen1 in ruleList.*/
 
 rule rPlayOpen2 if
 	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' then
@@ -287,7 +355,12 @@ rule rPlayOpen2 if
 
 rule rPlayHorror1 if
 	platform is 'Playstation 4' and action is 'No' and horror is 'Yes' then
-	chosen_game becomes name of until_dawn and include rPlayHorror1 in ruleList.
+	chosen_game becomes (
+	if fuzzy_result is below 10 then name of medi_evil
+	else if fuzzy_result is below 30 then name of days_gone
+	else if fuzzy_result is below 60 then name of until_dawn  
+	else name of resident_evil)
+	and include rPlayHorror1 in ruleList.	
 
 rule rPlayHorror2 if
 	platform is 'Playstation 4' and action is 'No' and horror is 'No' then
@@ -295,7 +368,10 @@ rule rPlayHorror2 if
 
 rule rPlayNorse1 if
 	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' and 'norse gods' is 'Yes' then
-	chosen_game becomes name of god_of_war and include rPlayNorse1 in ruleList.
+	chosen_game becomes (
+	if fuzzy_result is below 40 then name of skyrim
+	else name of god_of_war )
+	and include rPlayNorse1 in ruleList.
 
 rule rPlayNorse2 if
 	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' and 'norse gods' is 'No' then
@@ -303,32 +379,47 @@ rule rPlayNorse2 if
 
 rule rPlaySports2 if
 	platform is 'Playstation 4' and action is 'No' and horror is 'No' and sports is 'No' then
-	chosen_game becomes name of tetris_effect and include rPlaySports2 in ruleList.
-
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of journey
+	else name of tetris_effect) 
+	and include rPlaySports2 in ruleList.
+	
 rule rPlaySports1 if
 	platform is 'Playstation 4'and action is 'No' and horror is 'No' and sports is 'Yes' then
 	do ask racing and include rPlaySports1 in ruleList.
 
 rule rPlayGiants1 if
 	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' and 'norse gods' is 'No' and giants is 'Yes' then
-	chosen_game becomes name of shadow_of_colossus and include rPlayGiants1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of extinction
+	else name of shadow_of_colossus)  and include rPlayGiants1 in ruleList.
 
 rule rPlayGiants2 if
 	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' and 'norse gods' is 'No' and giants is 'No' then
-	chosen_game becomes name of horizon_zero_dawn and include rPlayGiants2 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of uncharted
+	else name of horizon_zero_dawn) and include rPlayGiants2 in ruleList.
 
 rule rPlayRacing1 if
 	platform is 'Playstation 4' and action is 'No' and horror is 'No' and sports is 'Yes' and racing is 'Yes' then
-	chosen_game becomes name of grand_turismo and include rPlayRacing1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 30 then name of grand_turismo
+	else if fuzzy_result is below 60 then name of assetto_corsa
+	else name of project_cars) and include rPlayRacing1 in ruleList.
 
 rule rPlayRacing2 if
 	platform is 'Playstation 4' and action is 'No' and horror is 'No' and sports is 'Yes' and racing is 'No' then
-	chosen_game becomes name of fifa and include rPlayRacing2 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 30 then name of fifa
+	else if fuzzy_result is below 60 then name of pes
+	else name of nba_2k_20) and include rPlayRacing2 in ruleList.
 
 % --- Rules Nintendo Switch --- %
 rule rSwitchOpen1 if
 	platform is 'Nintendo Switch' and 'open world' is 'Yes' then
-	chosen_game becomes name of legend_of_zelda and include rSwitchOpen1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of mario_odyssey
+	else name of legend_of_zelda) and include rSwitchOpen1 in ruleList.
 
 rule rSwitchOpen2 if
 	platform is 'Nintendo Switch' and 'open world' is 'No' then
@@ -336,7 +427,9 @@ rule rSwitchOpen2 if
 
 rule rSwitchStrategy1 if
 	platform is 'Nintendo Switch' and strategy is 'Yes' then
-	chosen_game becomes name of mario_rabbids and include rSwitchStrategy1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 50 then name of mario_rabbids
+	else name of fire_emblem) and include rSwitchStrategy1 in ruleList.
 
 rule rSwitchStrategy2 if
 	platform is 'Nintendo Switch' and strategy is 'No' then
@@ -344,7 +437,10 @@ rule rSwitchStrategy2 if
 
 rule rSwitchSports1 if
 	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'No' then
-	chosen_game becomes name of pokemon and include rSwitchSports1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 20 then name of pokemon
+	else if fuzzy_result is below 40 then name of captain_toad
+	else name of mario_maker) and include rSwitchSports1 in ruleList.
 
 rule rSwitchSports2 if
 	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' then
@@ -352,7 +448,9 @@ rule rSwitchSports2 if
 
 rule rSwitchRacing1 if
 	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' and racing is 'Yes' then
-	chosen_game becomes name of mario_kart and include rSwitchRacing1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of mario_kart
+	else name of table_top) and include rSwitchRacing1 in ruleList.
 
 rule rSwitchRacing2 if
 	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' and racing is 'No' then
@@ -360,17 +458,17 @@ rule rSwitchRacing2 if
 
 rule rSwitchFighting1 if
 	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' and racing is 'No' and fighting is 'Yes' then
-	chosen_game becomes name of super_smash_brothers and include rSwitchFighting1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of pokken_tournament
+	else name of super_smash_brothers ) and include rSwitchFighting1 in ruleList.
 
 rule rSwitchFighting2 if
 	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' and racing is 'No' and fighting is 'No' then
 	chosen_game becomes ( 
-	if teste is below 10 then name of mario_tennis
-	else if teste is below 30 then name of nba_2k_20  
-	else if teste is below 60 then name of golf_story  
-	else name of rocket_league  )
-	and include rSwitchFighting2 in ruleList.
-
+	if fuzzy_result is below 20 then name of mario_tennis
+	else if fuzzy_result is below 40 then name of mario_sonic
+	else if fuzzy_result is below 60 then name of golf_story  
+	else name of nba_2k_20 ) and include rSwitchFighting2 in ruleList.
 
 % --- Rules PC --- %
 rule rPcProvider1 if
@@ -391,11 +489,15 @@ rule rPcProviderOrigin if
 
 rule rPcProviderEpic if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Epic Games' then
-	chosen_game and include rPcProviderEpic in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of fortnite
+	else name of metro_exodus) and include rPcProviderEpic in ruleList.
 
 rule rPcMoba1 if
 	platform is 'PC' and provider is 'No' and moba is 'Yes' then
-	chosen_game becomes name of lol and include rPcMoba1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of smite
+	else name of lol) and include rPcMoba1 in ruleList.
 
 rule rPcMoba2 if
 	platform is 'PC' and provider is 'No' and moba is 'No' then
@@ -427,7 +529,10 @@ rule rPcStrategy2 if
 
 rule rPcSteamFpsReal1 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'Yes' and realistic is 'Yes' then
-	chosen_game becomes name of counter_strike and include rPcSteamFpsReal1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 30 then name of killing_floor
+	else if fuzzy_result is below 60 then name of counter_strike
+	else name of rainbow_six) and include rPcSteamFpsReal1 in ruleList.
 
 rule rPcSteamFpsReal2 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'Yes' and realistic is 'No' then
@@ -435,19 +540,27 @@ rule rPcSteamFpsReal2 if
 
 rule rPcSteamPuzzle1 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'No' and puzzle is 'Yes' then
-	chosen_game becomes name of portal and include rPcSteamPuzzle1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 50 then name of portal
+	else name of hunie_pop) and include rPcSteamPuzzle1 in ruleList.
 
 rule rPcSteamPuzzle2 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'No' and puzzle is 'No' then
-	chosen_game becomes name of dota and include rPcSteamPuzzle2 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 50 then name of dota
+	else name of dota_underlords) and include rPcSteamPuzzle2 in ruleList.
 
 rule rPcOriginFpsReal1 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'Yes' and realistic is 'Yes' then
-	chosen_game becomes name of battlefield and include rPcOriginFpsReal1 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 40 then name of battlefield
+	else name of titan_fall) and include rPcOriginFpsReal1 in ruleList.
 
 rule rPcOriginFpsReal2 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'Yes' and realistic is 'No' then
-	chosen_game becomes name of star_wars_battlefront and include rPcOriginFpsReal2 in ruleList.
+	chosen_game becomes ( 
+	if fuzzy_result is below 50 then name of star_wars_battlefront
+	else name of apex_legends) and include rPcOriginFpsReal2 in ruleList.
 	
 rule rPcOriginSimulation1 if
 	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' and simulation is 'Yes' then
@@ -572,7 +685,7 @@ ruleset rules_mobile
 	terminate when chosen_game is different from unknown;
 	update ruleset by removing each selected rule.
 
-do consult('ficha_5.pl').
+do consult('modified_ficha_5.pl').
 do consult('explainhow.pl').
 do consult('explainwhynot.pl').
 
@@ -666,7 +779,7 @@ action classification(GRP);
 action run do
 	restart and
 	do classification(GRP) and
-	teste becomes GRP and
+	fuzzy_result becomes GRP and
 	invoke ruleset platform_rules and
 	lista_evidencias(LEvid) and
 	formata_msg(chosen_game, LEvid, Msg) and

@@ -1,6 +1,6 @@
 formata_msg(Conc, Evid, Res):-
-	conc('Diagnóstico: ', Conc, Conc1),
-	conc(Conc1,'~M~J~M~JEvidências:~M~J',Conc2),
+	conc('Chosen game: ', Conc, Conc1),
+	conc(Conc1,'~M~J~M~JEvidences:~M~J',Conc2),
 	junta(Evid, Evid1),
 	conc(Conc2,Evid1,Res).
 

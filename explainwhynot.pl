@@ -1,5 +1,5 @@
 :-dynamic conclusion/4, message/1.
-:-new_question(q_conclusion,['Seleccione a conclusão que esperava obter:'],single(g_conclusions),none).
+:-new_question(q_conclusion,['Select the desired conclusion(game):'],single(g_conclusions),none).
 
 getConclusions(LConc):-
 	setof(Str,(R,LHS,RHS,Exp,S,C)^(isa_rule(R,LHS,RHS,Exp,S),getC(R,RHS,C,Str)),LConc).
@@ -17,15 +17,15 @@ explainWhyNot:-
 	write(ExpectedConc)~>ExpectedConcStr,findall(R,conclusion(R,C,V,ExpectedConcStr),LR),
 	conclusion(_,C,V,ExpectedConcStr),
 	explainWhyNot(LR,new_value(C,V),0),
-	message(M),msgbox('Explicação',M,0,_).
+	message(M),msgbox('Explanation',M,0,_).
 
 explainWhyNot([],_,_):-!.
 explainWhyNot(_,new_value(C,V),Ident):-
 	isa_slot(C,global,V),
-	(tab(Ident),write('A conclusão é verdadeira!'),nl)~>Msg,appendMessage(Msg).
+	(tab(Ident),write('The conclusion is true'),nl)~>Msg,appendMessage(Msg).
 explainWhyNot([R|LR],new_value(C,V),Ident):-
 	isa_rule(R,LHS,_,_,_),
-	(tab(Ident),write('A regra '),write(R),write(', que permitiria concluir "'),write(C),write(': '),write(V),write('", não disparou porque:'),nl)~>Msg,appendMessage(Msg),
+	(tab(Ident),write('The rule '),write(R),write(', that would make it possible to conclude "'),write(C),write(': '),write(V),write('", did not trigger because:'),nl)~>Msg,appendMessage(Msg),
 	Ident1 is Ident+2,
 	showFalseConditions(LHS,Ident1),
 	explainWhyNot(LR,new_value(C,V),Ident).
@@ -41,10 +41,10 @@ showFalseConditions(_,_).
 checkCondition(equality(C,V),Ident):-
 	isa_question(C,_,_,_),
 	not isa_slot(C,global,V),!,
-	(tab(Ident),write('A evidência "'),write(C),write(': '),write(V),write('" não foi observada'),nl)~>Msg,appendMessage(Msg).
+	(tab(Ident),write('The evidence "'),write(C),write(': '),write(V),write('" was not observed'),nl)~>Msg,appendMessage(Msg).
 checkCondition(equality(C,V),Ident):-
 	not isa_slot(C,global,V),!,
-	(tab(Ident),write('A conclusão "'),write(C),write(': '),write(V),write('" não é verdadeira'),nl)~>Msg,appendMessage(Msg),
+	(tab(Ident),write('The conclusion "'),write(C),write(': '),write(V),write('" is not true'),nl)~>Msg,appendMessage(Msg),
 	findall(R,conclusion(R,C,V,_),LR),
 	Ident1 is Ident+2,
 	explainWhyNot(LR,new_value(C,V),Ident1).
