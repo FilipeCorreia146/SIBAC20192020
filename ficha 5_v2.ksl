@@ -1,141 +1,680 @@
-group resposta sim, não.
+% --- Groups and frame --- %
+group answer 'Yes', 'No'.
+group platform 'Playstation 4', 'Nintendo Switch', 'PC', 'Mobile'.
+group provider 'Steam', 'Origin', 'Epic Games'.
 
-question 'sangue no ouvido' 
-'Existe sangue no ouvido?';
-choose one of resposta.
+frame game
+	default name is '' and
+	default rating is ''.
 
-question 'dor no ouvido'
-'Existe dor no ouvido?';
-choose one of resposta.
+% --- Game's instances declaration --- %
+instance spider_man is a game
+name is 'Spider-Man' and rating is ''.
 
-question surdez
-'Existe surdez?';
-choose one of resposta.
+instance god_of_war is a game
+name is 'God Of War' and rating is ''.
 
-question 'derramamento liq. cefal.'
-'Existe derramamento de líquido cefalorraquiano?';
-choose one of resposta.
+instance until_dawn is a game
+name is 'Until Dawn' and rating is ''.
 
-question 'dor de cabeca'
-'Existe dor de cabeça?';
-choose one of resposta.
+instance tetris_effect is a game
+name is 'Tetris Effect' and rating is ''.
 
-question 'sangue no nariz'
-'Existe sangue no nariz?';
-choose one of resposta.
+instance shadow_of_colossus is a game
+name is 'Shadow of Colossus' and rating is ''.
 
-question 'sangue no ouvido'
-'Existe sangue no ouvido?';
-choose one of resposta.
+instance horizon_zero_dawn is a game
+name is 'Horizon: Zero Dawn' and rating is ''.
 
-question 'sangue na boca'
-'Existe sangue na boca?';
-choose one of resposta.
+instance grand_turismo is a game
+name is 'Grand Turismo' and rating is ''.
 
-question 'cor sangue castanho escuro'
-'O sangue apresenta cor castanho escuro?';
-choose one of resposta.
+instance fifa is a game
+name is 'FIFA' and rating is ''.
 
-question vomitos
-'Vomitos?';
-choose one of resposta.
+instance legend_of_zelda is a game
+name is 'Legend Of Zelda' and rating is ''.
 
-question 'sangue na vagina'
-'Existe sangue na vagina?';
-choose one of resposta.
+instance mario_rabbids is a game
+name is 'Mario + Rabbids: Kingdom Battle' and rating is ''.
 
-question 'sangue no penis'
-'Existe sangue no penis?';
-choose one of resposta.
+instance pokemon is a game
+name is 'Pokemon' and rating is ''.
 
-question 'sangue no anus'
-'Existe sangue no anus ou nas vezes?';
-choose one of resposta.
+instance mario_kart is a game
+name is 'Mario Kart' and rating is ''.
 
-question 'sangue anus tipo borras de cafe'
-'Existe sangue nas vezes com aparência de borras de café?';
-choose one of resposta.
+instance super_smash_brothers is a game
+name is 'Super Smash Brothers' and rating is ''.
 
-question 'sangue anus normal'
-'Existe sangue nas vezes com aparência normal?';
-choose one of resposta.
+instance mario_tennis is a game
+name is 'Mario Tennis Aces' and rating is ''.
+
+instance pokemon_go is a game
+name is 'Pokemon Go' and rating is ''.
+
+instance minecraft_earth is a game
+name is 'Minecraft Earth' and rating is ''.
+
+instance minecraft is a game
+name is 'Minecraft' and rating is ''.
+
+instance skyrim is a game
+name is 'Skyrim ' and rating is ''.
+
+instance gta is a game
+name is 'GTA' and rating is ''.
+
+instance clash_royale is a game
+name is 'Clash Royale' and rating is ''.
+
+instance asphalt is a game
+name is 'Asphalt' and rating is ''.
+
+instance real_racing is a game
+name is 'Real Racing' and rating is ''.
+
+instance counter_strike is a game
+name is 'Counter Strike' and rating is ''.
+
+instance team_fortress is a game
+name is 'Team Fortress' and rating is ''.
+
+instance left4dead is a game
+name is 'Left 4 Dead' and rating is ''.
+
+instance portal is a game
+name is 'Portal' and rating is ''.
+
+instance dota is a game
+name is 'DOTA 2' and rating is ''.
+
+instance battlefield is a game
+name is 'Battlefield' and rating is ''.
+
+instance star_wars_battlefront is a game
+name is 'Star Wars: Battlefront' and rating is ''.
+
+instance the_sims is a game
+name is 'The Sims' and rating is ''.
+
+instance dragon_age is a game
+name is 'Dragon Age' and rating is ''.
+
+instance command_conquer is a game
+name is 'Command and Conquer' and rating is ''.
+
+instance fortnite is a game
+name is 'Fortnite' and rating is ''.
+
+instance lol is a game
+name is 'League Of Legends' and rating is ''.
+
+instance starcraft is a game
+name is 'Starcraft' and rating is ''.
+
+instance civilization is a game
+name is 'Civilization' and rating is ''.
+
+instance minecraft is a game
+name is 'Minecraft' and rating is ''.
+
+instance terraria is a game
+name is 'Terraria' and rating is ''.
+
+instance gta is a game
+name is 'Grand Theft Auto' and rating is ''.
+
+instance nba_2k_20 is a game
+name is 'NBA2K20' and rating is ''.
+
+instance rocket_league is a game
+name is 'Rocket League' and rating is ''.
+
+instance golf_story is a game
+name is 'Golf Story' and rating is ''.
+
+% --- Questions --- %
+
+question platform
+'What platform are you gaming on?';
+choose one of platform.
+
+question provider
+'Are you thinking of playing an exclusive (by game provider)?';
+choose one of answer.
+
+question 'which provider'
+'Which provider?';
+choose one of provider.
+
+question action 
+'Do you want an action game?';
+choose one of answer.
+
+question 'open world' 
+'Do you want an open world game?';
+choose one of answer.
+
+question horror 
+'Do you want an horror game?';
+choose one of answer.
+
+question sports 
+'Do you want a sports game?';
+choose one of answer.
+
+question racing 
+'Do you want a racing game?';
+choose one of answer.
+
+question strategy 
+'Do you want a strategy game?';
+choose one of answer.
+
+question turn 
+'Do you want it to be turn based?';
+choose one of answer.
+
+question fighting 
+'Do you want a fighting game?';
+choose one of answer.
+
+question moba
+'Do you want to play a MOBA?';
+choose one of answer.
+
+question sandbox 
+'Do you want a sandbox game?';
+choose one of answer.
+
+question 'norse gods' 
+'Do you want to fight norse gods?';
+choose one of answer.
+
+question giants 
+'Do you want to fight giants?';
+choose one of answer.
+
+question 'own world' 
+'Do you like creating your own world?';
+choose one of answer.
+
+question '3d'
+'Do you want it 3d?';
+choose one of answer.
+
+question fps
+'Do you want an FPS?';
+choose one of answer.
+
+question realistic
+'Do you want a realistic game?';
+choose one of answer.
+
+question zombies
+'Do you want zombies?';
+choose one of answer.
+
+question puzzle
+'Do you want a puzzling game?';
+choose one of answer.
+
+question simulation
+'Do you want a simulation game?';
+choose one of answer.
+
+question rpg
+'Do you want an RPG?';
+choose one of answer.
+
+question interactive
+'Do you want an interactive game?';
+choose one of answer.
+
+question 'catch them all'
+'Do you want "to catch them all"?';
+choose one of answer.
+
+question arcade
+'Do you want an arcade inspired game?';
+choose one of answer.
+
+% --- Rules Platform--- %
+rule rPlaystation if
+	platform is 'Playstation 4' then
+	do ask action and invoke ruleset rules_playstation and include rPlaystation in ruleList.
+
+rule rSwitch if
+	platform is 'Nintendo Switch' then
+	do ask 'open world' and invoke rules_switch and include rSwitch in ruleList.
+
+rule rPC if
+	platform is 'PC' then
+	do ask provider and invoke rules_pc and include rPC in ruleList.	
+
+rule rMobile if
+	platform is 'Mobile' then
+	do ask interactive and invoke rules_mobile and include rMobile in ruleList.
+
+% --- Rules Playstation --- %
+rule rPlayAction1 if
+	platform is 'Playstation 4' and action is 'Yes' then
+	do ask 'open world' and include rPlayAction1 in ruleList.
+
+rule rPlayAction2 if
+	platform is 'Playstation 4' and action is 'No' then
+	do ask horror and include rPlayAction2 in ruleList.
+
+rule rPlayOpen1 if
+	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'Yes' then
+	chosen_game becomes ( 
+	if teste is below 10 then name of spider_man
+	else if teste is below 30 then name of skyrim  
+	else if teste is below 60 then name of gta  
+	else name of minecraft  )
+	and include rPlayOpen1 in ruleList.
 
 
-rule r1 if
-	'sangue no ouvido' is sim then
-	hemorragia becomes superior and include r1 in ruleList.
+/*else if platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'Yes' and
+	the game_group is below 50 then the
+	chosen_game becomes the name of until_dawn
+	and include rPlayOpen1 in ruleList.*/
 
-rule r2 if
-	'sangue no ouvido' is não then
-	hemorragia becomes inferior and include r2 in ruleList.
+rule rPlayOpen2 if
+	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' then
+	do ask 'norse gods' and include rPlayOpen2 in ruleList.
 
-rule r3 if
-	hemorragia is superior and ['dor no ouvido' is sim or surdez is sim] then
-	diagnostico becomes otorragia and include r3 in ruleList.
+rule rPlayHorror1 if
+	platform is 'Playstation 4' and action is 'No' and horror is 'Yes' then
+	chosen_game becomes name of until_dawn and include rPlayHorror1 in ruleList.
 
-rule r4 if
-	hemorragia is superior and 'dor no ouvido' is não and surdez is não and ['derramamento liq. cefal.' is sim or 'dor de cabeca' is sim] then
-	diagnostico becomes 'fractura craniana' and include r4 in ruleList.
+rule rPlayHorror2 if
+	platform is 'Playstation 4' and action is 'No' and horror is 'No' then
+	do ask sports and include rPlayHorror2 in ruleList.
 
-rule r5 if
-	hemorragia is inferior and 'sangue no nariz' is sim then
-	diagnostico becomes epistaxe and include r5 in ruleList.
+rule rPlayNorse1 if
+	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' and 'norse gods' is 'Yes' then
+	chosen_game becomes name of god_of_war and include rPlayNorse1 in ruleList.
 
-rule r6 if
-	hemorragia is inferior and 'sangue no nariz' is não and 'sangue na boca' is sim then
-	'problema na boca' becomes sim and include r6 in ruleList.
+rule rPlayNorse2 if
+	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' and 'norse gods' is 'No' then
+	do ask giants and include rPlayNorse2 in ruleList.
 
-rule r7 if
-	'problema na boca' is sim and 'cor sangue castanho escuro' is sim and vomitos is sim then
-	diagnostico becomes hematese and include r7 in ruleList.
+rule rPlaySports2 if
+	platform is 'Playstation 4' and action is 'No' and horror is 'No' and sports is 'No' then
+	chosen_game becomes name of tetris_effect and include rPlaySports2 in ruleList.
 
-rule r8 if
-	'problema na boca' is sim and 'cor sangue castanho escuro' is não and vomitos is não then
-	diagnostico becomes 'hemorragia da boca' and include r8 in ruleList.
+rule rPlaySports1 if
+	platform is 'Playstation 4'and action is 'No' and horror is 'No' and sports is 'Yes' then
+	do ask racing and include rPlaySports1 in ruleList.
 
-rule r9 if
-	hemorragia is inferior and 'sangue na boca' is não then
-	'problema inferior' becomes sim and include r9 in ruleList.
+rule rPlayGiants1 if
+	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' and 'norse gods' is 'No' and giants is 'Yes' then
+	chosen_game becomes name of shadow_of_colossus and include rPlayGiants1 in ruleList.
 
-rule r10 if
-	'problema inferior' is sim and 'sangue na vagina' is sim then
-	diagnostico becomes metrorragia and include r10 in ruleList.
+rule rPlayGiants2 if
+	platform is 'Playstation 4' and action is 'Yes' and 'open world' is 'No' and 'norse gods' is 'No' and giants is 'No' then
+	chosen_game becomes name of horizon_zero_dawn and include rPlayGiants2 in ruleList.
 
-rule r11 if
-	'problema inferior' is sim and 'sangue no penis' is sim then
-	diagnostico becomes hematuria and include r11 in ruleList.
+rule rPlayRacing1 if
+	platform is 'Playstation 4' and action is 'No' and horror is 'No' and sports is 'Yes' and racing is 'Yes' then
+	chosen_game becomes name of grand_turismo and include rPlayRacing1 in ruleList.
 
-rule r12 if
-	'problema inferior' is sim and 'sangue no anus' is sim then
-	'problema no anus' becomes sim and include r12 in ruleList.
+rule rPlayRacing2 if
+	platform is 'Playstation 4' and action is 'No' and horror is 'No' and sports is 'Yes' and racing is 'No' then
+	chosen_game becomes name of fifa and include rPlayRacing2 in ruleList.
 
-rule r13 if
-	'problema no anus' is sim and 'sangue anus tipo borras de cafe' is sim then
-	diagnostico becomes melena and include r13 in ruleList.
+% --- Rules Nintendo Switch --- %
+rule rSwitchOpen1 if
+	platform is 'Nintendo Switch' and 'open world' is 'Yes' then
+	chosen_game becomes name of legend_of_zelda and include rSwitchOpen1 in ruleList.
 
-rule r14 if
-	'problema no anus' is sim and 'sangue anus normal' is sim then
-	diagnostico becomes rectorragia and include r14 in ruleList.
+rule rSwitchOpen2 if
+	platform is 'Nintendo Switch' and 'open world' is 'No' then
+	do ask strategy and include rSwitchOpen2 in ruleList.
+
+rule rSwitchStrategy1 if
+	platform is 'Nintendo Switch' and strategy is 'Yes' then
+	chosen_game becomes name of mario_rabbids and include rSwitchStrategy1 in ruleList.
+
+rule rSwitchStrategy2 if
+	platform is 'Nintendo Switch' and strategy is 'No' then
+	do ask sports and include rSwitchStrategy2 in ruleList.
+
+rule rSwitchSports1 if
+	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'No' then
+	chosen_game becomes name of pokemon and include rSwitchSports1 in ruleList.
+
+rule rSwitchSports2 if
+	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' then
+	do ask racing and include rSwitchSports2 in ruleList.
+
+rule rSwitchRacing1 if
+	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' and racing is 'Yes' then
+	chosen_game becomes name of mario_kart and include rSwitchRacing1 in ruleList.
+
+rule rSwitchRacing2 if
+	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' and racing is 'No' then
+	do ask fighting and include rSwitchRacing2 in ruleList.
+
+rule rSwitchFighting1 if
+	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' and racing is 'No' and fighting is 'Yes' then
+	chosen_game becomes name of super_smash_brothers and include rSwitchFighting1 in ruleList.
+
+rule rSwitchFighting2 if
+	platform is 'Nintendo Switch' and strategy is 'No' and sports is 'Yes' and racing is 'No' and fighting is 'No' then
+	chosen_game becomes ( 
+	if teste is below 10 then name of mario_tennis
+	else if teste is below 30 then name of nba_2k_20  
+	else if teste is below 60 then name of golf_story  
+	else name of rocket_league  )
+	and include rSwitchFighting2 in ruleList.
 
 
-ruleset rs
-	contains all rules;
-	initiate by doing diagnostico becomes desconhecido;
-	terminate when diagnostico is different from desconhecido;
+% --- Rules PC --- %
+rule rPcProvider1 if
+	platform is 'PC' and provider is 'Yes' then
+	do ask 'which provider' and include rPcProvider1 in ruleList.
+
+rule rPcProvider2 if
+	platform is 'PC' and provider is 'No' then
+	do ask moba and include rPcProvider2 in ruleList.
+
+rule rPcProviderSteam if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' then
+	do ask fps and include rPcProviderSteam in ruleList.
+
+rule rPcProviderOrigin if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' then
+	do ask fps and include rPcProviderOrigin in ruleList.
+
+rule rPcProviderEpic if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Epic Games' then
+	chosen_game and include rPcProviderEpic in ruleList.
+
+rule rPcMoba1 if
+	platform is 'PC' and provider is 'No' and moba is 'Yes' then
+	chosen_game becomes name of lol and include rPcMoba1 in ruleList.
+
+rule rPcMoba2 if
+	platform is 'PC' and provider is 'No' and moba is 'No' then
+	do ask strategy and include rPcMoba2 in ruleList.
+
+rule rPcSteamFps1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'Yes' then
+	do ask realistic and include rPcSteamFps1 in ruleList.
+
+rule rPcSteamFps2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'No' then
+	do ask puzzle and include rPcSteamFps2 in ruleList.
+
+rule rPcOriginFps1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'Yes' then
+	do ask realistic and include rPcOriginFps1 in ruleList.
+
+rule rPcOriginFps2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' then
+	do ask simulation and include rPcOriginFps2 in ruleList.
+
+rule rPcStrategy1 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'Yes' then
+	do ask turn and include rPcStrategy1 in ruleList.
+
+rule rPcStrategy2 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'No' then
+	do ask sandbox and include rPcStrategy2 in ruleList.
+
+rule rPcSteamFpsReal1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'Yes' and realistic is 'Yes' then
+	chosen_game becomes name of counter_strike and include rPcSteamFpsReal1 in ruleList.
+
+rule rPcSteamFpsReal2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'Yes' and realistic is 'No' then
+	do ask zombies and include rPcSteamFpsReal2 in ruleList.
+
+rule rPcSteamPuzzle1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'No' and puzzle is 'Yes' then
+	chosen_game becomes name of portal and include rPcSteamPuzzle1 in ruleList.
+
+rule rPcSteamPuzzle2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'No' and puzzle is 'No' then
+	chosen_game becomes name of dota and include rPcSteamPuzzle2 in ruleList.
+
+rule rPcOriginFpsReal1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'Yes' and realistic is 'Yes' then
+	chosen_game becomes name of battlefield and include rPcOriginFpsReal1 in ruleList.
+
+rule rPcOriginFpsReal2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'Yes' and realistic is 'No' then
+	chosen_game becomes name of star_wars_battlefront and include rPcOriginFpsReal2 in ruleList.
+	
+rule rPcOriginSimulation1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' and simulation is 'Yes' then
+	chosen_game becomes name of the_sims and include rPcOriginSimulation1 in ruleList.
+
+rule rPcOriginSimulation2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' and simulation is 'No' then
+	do ask sports and include rPcOriginSimulation2 in ruleList.
+
+rule rPcTurn1 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'Yes' and turn is 'No' then
+	chosen_game becomes name of starcraft and include rPcTurn1 in ruleList.
+
+rule rPcTurn2 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'Yes' and turn is 'Yes' then
+	chosen_game becomes name of civilization and include rPcTurn2 in ruleList.
+
+rule rPcSandbox1 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'No' and sandbox is 'No' then
+	chosen_game becomes name of wow and include rPcSandbox1 in ruleList.
+
+rule rPcSandbox2 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'No' and sandbox is 'Yes' then
+	do ask 'own world' and include rPcSandbox2 in ruleList.
+
+rule rPcSteamZombie1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'Yes' and realistic is 'No' and zombies is 'Yes' then
+	chosen_game becomes name of left4dead and include rPcSteamZombie1 in ruleList.
+
+rule rPcSteamZombie2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Steam' and fps is 'Yes' and realistic is 'No' and zombies is 'No' then
+	chosen_game becomes name of team_fortress and include rPcSteamZombie2 in ruleList.
+
+rule rPcOriginSports1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' and simulation is 'No' and sports is 'Yes' then
+	chosen_game becomes name of fifa and include rPcOriginSports1 in ruleList.
+
+rule rPcOriginSports2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' and simulation is 'No' and sports is 'No' then
+	do ask rpg and include rPcOriginSports2 in ruleList.
+
+rule rPcOwnWorld1 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'No' and sandbox is 'Yes' and 'own world' is 'No' then
+	chosen_game and include rPcOwnWorld1 in ruleList.
+
+rule rPcOwnWorld2 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'No' and sandbox is 'Yes' and 'own world' is 'Yes' then
+	do ask '3d' and include rPcOwnWorld2 in ruleList.
+
+rule rPcOriginRPG1 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' and simulation is 'No' and sports is 'No' and rpg is 'Yes' then
+	chosen_game becomes name of dragon_age and include rPcOriginRPG1 in ruleList.
+
+rule rPcOriginRPG2 if
+	platform is 'PC' and provider is 'Yes' and 'which provider' is 'Origin' and fps is 'No' and simulation is 'No' and sports is 'No' and rpg is 'No' then
+	chosen_game becomes name of command_conquer and include rPcOriginRPG1 in ruleList.
+
+rule rPc3D1 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'No' and sandbox is 'Yes' and 'own world' is 'Yes' and '3d' is 'Yes' then
+	chosen_game becomes name of terraria and include rPc3D1 in ruleList.
+
+rule rPc3D2 if
+	platform is 'PC' and provider is 'No' and moba is 'No' and strategy is 'No' and sandbox is 'Yes' and 'own world' is 'Yes' and '3d' is 'No' then
+	chosen_game becomes name of minecraft and include rPc3D2 in ruleList.
+
+% --- Rules Mobile --- %
+rule rMobileInteractive1 if
+	platform is 'Mobile' and interactive is 'Yes' then
+	do ask 'catch them all' and include rMobileInteractive1 in ruleList.
+
+rule rMobileInteractive2 if
+	platform is 'Mobile' and interactive is 'No' then
+	do ask racing and include rMobileInteractive2 in ruleList.
+
+rule rMobileCatch1 if
+	platform is 'Mobile' and interactive is 'Yes' and 'catch them all' is 'Yes' then
+	chosen_game becomes name of pokemon_go and include rMobileCatch1 in ruleList.
+
+rule rMobileCatch2 if
+	platform is 'Mobile' and interactive is 'Yes' and 'catch them all' is 'No' then
+	chosen_game becomes name of minecraft_earth and include rMobileCatch2 in ruleList.
+
+rule rMobileRacing1 if
+	platform is 'Mobile' and interactive is 'No' and racing is 'No' then
+	chosen_game becomes name of clash_royale and include rMobileRacing1 in ruleList.
+
+rule rMobileRacing2 if
+	platform is 'Mobile' and interactive is 'No' and racing is 'Yes' then
+	do ask arcade and include rMobileRacing2 in ruleList.
+
+rule rMobileArcade1 if
+	platform is 'Mobile' and interactive is 'No' and racing is 'Yes' and arcade is 'Yes' then
+	chosen_game becomes name of asphalt and include rMobileArcade1 in ruleList.
+
+rule rMobileArcade2 if
+	platform is 'Mobile' and interactive is 'No' and racing is 'Yes' and arcade is 'No' then
+	chosen_game becomes name of real_racing and include rMobileArcade2 in ruleList.
+
+ruleset platform_rules
+	contains rPlaystation,rSwitch,rPC,rMobile;
+	initiate by doing chosen_game becomes unknown;
+	terminate when platform is different from unknown;
+	update ruleset by removing each selected rule.
+
+ruleset rules_playstation
+	contains rPlayAction1,rPlayAction2,rPlayOpen1,rPlayOpen2,rPlayHorror1,rPlayHorror2,rPlayNorse1,rPlayNorse2,rPlaySports2,rPlaySports1,rPlayGiants1,rPlayGiants2,rPlayRacing1,rPlayRacing2;
+	terminate when chosen_game is different from unknown;
+	update ruleset by removing each selected rule.
+
+ruleset rules_switch
+	contains rSwitchOpen1,rSwitchOpen2,rSwitchStrategy1,rSwitchStrategy2,rSwitchSports1,rSwitchSports2,rSwitchRacing1,rSwitchRacing2,rSwitchFighting1,rSwitchFighting2;
+	terminate when chosen_game is different from unknown;
+	update ruleset by removing each selected rule.
+
+ruleset rules_pc
+	contains rPcProvider1,rPcProvider2,rPcProviderSteam,rPcProviderOrigin,rPcProviderEpic,rPcMoba1,rPcMoba2,rPcSteamFps1,rPcSteamFps2,rPcOriginFps1,rPcOriginFps2,rPcStrategy1,rPcStrategy2,rPcSteamFpsReal1,rPcSteamFpsReal2,rPcSteamPuzzle1,rPcSteamPuzzle2,rPcOriginFpsReal1,rPcOriginFpsReal2,rPcOriginSimulation1,rPcOriginSimulation2,rPcTurn1,rPcTurn2,rPcSandbox1,rPcSandbox2,rPcSteamZombie1,rPcSteamZombie2,rPcOriginSports1,rPcOriginSports2,rPcOwnWorld1,rPcOwnWorld2,rPcOriginRPG1,rPcOriginRPG2,rPc3D1,rPc3D2;
+	terminate when chosen_game is different from unknown;
+	update ruleset by removing each selected rule.
+
+ruleset rules_mobile
+	contains rMobileInteractive1,rMobileInteractive2,rMobileCatch1,rMobileCatch2,rMobileRacing1,rMobileRacing2,rMobileArcade1,rMobileArcade2;
+	terminate when chosen_game is different from unknown;
 	update ruleset by removing each selected rule.
 
 do consult('ficha_5.pl').
 do consult('explainhow.pl').
 do consult('explainwhynot.pl').
 
+%FE age_group edited at 21:58:58 on 7/1/2020
+fuzzy_variable age_group ;
+   ranges from 0 to  90 ; 
+   fuzzy_set child is \ shaped and linear at 0, 14 ; 
+   fuzzy_set teenager is /\ shaped and linear at 12, 16, 20 ; 
+   fuzzy_set young_adult is /\ shaped and linear at 18, 27, 36 ; 
+   fuzzy_set adult is /\ shaped and linear at 30, 45, 60 ; 
+   fuzzy_set senior is /\ shaped and linear at 50, 65, 80 ; 
+   fuzzy_set elder is / shaped and linear at 65, 90 ; 
+   defuzzify using 
+      all memberships
+       and mirror rule
+       and shrinking . 
+
+%FE difficulty created at 22:38:37 on 7/1/2020
+fuzzy_variable difficulty ;
+   ranges from 0 to  100 ; 
+   fuzzy_set easy is \ shaped and linear at 0, 30 ; 
+   fuzzy_set medium is /\ shaped and linear at 20, 35, 55 ; 
+   fuzzy_set hard is /\ shaped and linear at 45, 60, 80 ; 
+   fuzzy_set insane is / shaped and linear at 70, 100 ; 
+   defuzzify using 
+      all memberships
+       and mirror rule
+       and shrinking . 
+
+%FE game_group edited at 23:47:38 on 7/1/2020
+fuzzy_variable game_group ;
+   ranges from 0 to  100 ; 
+   fuzzy_set begginer is \ shaped and linear at 10, 30 ; 
+   fuzzy_set casual is /\ shaped and linear at 14, 37, 60 ; 
+   fuzzy_set intermediate is /\ shaped and linear at 42, 61, 81 ; 
+   fuzzy_set hardcore is / shaped and linear at 71, 88 ; 
+   defuzzify using 
+      all memberships
+       and mirror rule
+       and shrinking . 
+
+
+
+fuzzy_matrix game_classification age_group * difficulty -> game_group ;
+child * easy -> begginer;
+child * medium -> begginer; 
+child * hard -> casual;
+child * insane -> casual; 
+teenager * easy -> begginer;
+teenager * medium -> casual;
+teenager * hard -> intermediate;
+teenager * insane -> hardcore;
+young_adult * easy -> casual;
+young_adult * medium -> intermediate;
+young_adult * hard -> hardcore;
+young_adult * insane -> hardcore;
+adult * easy -> casual;
+adult * medium -> intermediate;
+adult * hard -> intermediate;
+adult * insane -> hardcore;senior * easy -> begginer;
+senior * medium -> begginer; 
+senior * hard -> casual;
+senior * insane -> hardcore;
+elder  * easy -> begginer;
+elder * medium -> begginer; 
+elder * hard -> casual;
+elder * insane -> intermediate .
+
+
+question age
+	'How old are you?';
+	input integer.
+
+question q_difficulty
+	'Choose, from 0 to 100 the game difficulty you are looking for.';
+	input integer.	
+
+
+action classification(GRP); 
+	do
+	restart
+	and uncertainty_trace 
+	and check that Age is age 
+	and check that Diff is q_difficulty 
+	and reset all fuzzy values
+  	and fuzzify the age_group from Age
+  	and fuzzify the difficulty from Diff
+  	and propagate game_classification fuzzy rules
+  	and defuzzify the game_group to GRP.
+
 action run do
 	restart and
-	invoke ruleset rs and
+	do classification(GRP) and
+	teste becomes GRP and
+	invoke ruleset platform_rules and
 	lista_evidencias(LEvid) and
-	formata_msg(diagnostico, LEvid, Msg) and
-	msgbox('Diagnóstico', Msg, 0, _) and
+	formata_msg(chosen_game, LEvid, Msg) and
+	msgbox('Chosen game', Msg, 0, _) and
 	explainHow(ruleList) and
 	explainWhyNot.
 
 	
+
+
 
